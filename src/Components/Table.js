@@ -5,18 +5,23 @@ import { columns, rowTheme } from "../Constants";
 import "../App.css";
 
 class App extends Component {
+  onCl = event => {
+    window.open(`https://en.wikipedia.org/wiki/${event.Name}`, "_blank");
+  };
   render() {
     const { search, searchedData, data } = this.props;
     console.log("searchedData---", this.props);
     return (
-      <div className='table-container'>
+      <div className="table-container">
         <DataTable
           title=""
           columns={columns}
           data={search ? searchedData : data}
           customTheme={rowTheme}
+          onRowClicked={this.onCl}
           pointerOnHover
           pagination
+          responsive
         />
       </div>
     );

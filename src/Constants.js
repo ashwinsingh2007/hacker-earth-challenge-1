@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "Rank",
       selector: "Rank",
-      sortable: true
+      sortable: true,
     },
     {
       name: "Name",
