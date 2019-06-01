@@ -1,7 +1,6 @@
 {
-  "name": "react-redux-saga-boilerplate",
+  "name": "hacker-earth-challenge",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@vtex/react-csv-parse": "^3.0.2",
     "papaparse": "^5.0.0",

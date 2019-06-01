@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import CsvParse from "@vtex/react-csv-parse";
+import CsvParse from "@vtex/react-csv-parse";
 import Table from "./Components/Table.js";
 import Search from "./Components/Search.js";
-// import { keys } from "./Constants.js";
+import { keys } from "./Constants.js";
 import Papa from "papaparse";
 
 import "./App.css";
@@ -18,14 +18,14 @@ class App extends Component {
   };
 
   componentDidMount() {
-    Papa.parse("./vgsales55c93b8.csv  ", {
+    Papa.parse("./vgsales55c93b8.csv", {
       skipEmptyLines: true,
       delimiter: "",
       header: true,
       download: true,
       dynamicTyping: true,
       error: (err, file, inputElem, reason) => {
-        // onError({ err, file, inputElem, reason })
+        console.log({ err, file, inputElem, reason })
       },
       complete: results => {
         console.log("results--", results);
@@ -53,12 +53,13 @@ class App extends Component {
       <div className="App">
         <h1 className="App-title">Top Games Challenge</h1>
         <div>
-          {/* <CsvParse
+        <h3>If Data doesn't load automatically, please select here</h3>
+          <CsvParse
             keys={keys}
             onDataUploaded={this.handleData}
             onError={this.handleError}
             render={onChange => <input type="file" onChange={onChange} />}
-          /> */}
+          />
           {this.state.error && (
             <h2>
               Something is wrong with csv . Please check the headers are: (Rank,
