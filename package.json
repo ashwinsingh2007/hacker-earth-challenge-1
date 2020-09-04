@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "@vtex/react-csv-parse": "^3.0.2",
-    "papaparse": "^5.0.0",
+    "papaparse": "^5.2.0",
     "react": "^16.4.1",
     "react-data-table-component": "^1.5.1",
     "react-dom": "^16.4.1",
